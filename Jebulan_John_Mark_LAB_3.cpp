@@ -38,12 +38,12 @@ void convertToPostfix(string input) {
     string output = "";
 
     cout << "| Input | Stack | Output |" << endl;
-    cout << "------------------------" << endl;
+    cout << "______________________________" << endl;
 
     for (int i = 0; i < input.length(); i++) {
 
         cout << "| " << input[i] << "     | " << stackOutput << "    | " << output << "    |" << endl;
-        cout << "------------------------" << endl;
+        cout << "________________________" << endl;
 
         if (isdigit(input[i])) {
             output += input[i];
@@ -68,7 +68,7 @@ void convertToPostfix(string input) {
         }
     }
 
-    // Pop any remaining operators from the stack
+    
     while (top >= 0) {
         output += pop();
     }
@@ -80,9 +80,9 @@ void convertToPostfix(string input) {
 }
 
 int main() {
-    string input = "(20+13)-15*15/5"; 
-    string input2 = "(5+5)*(8-2)/6"; 
-    string input3 = "45/5+3*4-7"; 
+    string input = "(2+3)-5*4/5"; 
+    string input2 = "(5+5)*(8-2)";
+    string input3 = "5+5+3*4-7";
     string input4 = "(5+6)*2+1"; 
     string input5 = "(5+6)*(2+1)";
     
